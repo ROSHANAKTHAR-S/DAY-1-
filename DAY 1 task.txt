@@ -1,0 +1,56 @@
+DIFFERENCE BETWEEN HTTP1.1 VS HTTP2
+
+HTTP stands for hypertext transfer protocol & it is used in client server communication.by using HTTP user sends the request to the server & the server send the response
+to the user. Its mainly on HTTP1.1 which was created in 1997 & the new one is HTTP2 which was created in 2015.
+ 
+HTTP1.1
+   
+  HTTP protocol was developed in 1989 as the common language that enables client and server machines’ interaction. Process steps are:
+     1.The client (browser) has to send a request to the server using the method (GET/POST).
+     2.Server responds with the requested resource, for example – image.  
+
+  HTTP/1.1 is a sequential protocol, where the browser opens only one TCP connection, requests one file, and only after receiving the file it moves to the next one. 
+  If a file is too large, or the server processing is too slow, the page can crash. 
+  To minimize this issue, browsers usually open multiple connections, between 6 and 8, per server. In HTTP/2, on the other hand, a TCP connection will be persistent and only one per source is needed since parallel requests and responses can request/receive all the necessary files.
+  It compresses data by itself.
+   
+        HTTP1.1 ---> jquery.js , image.png ---> 3 tcp connections ---> server.
+
+HTTP2
+    
+   HTTP/2 was developed over the SPDY protocol. HTTP/2 works on the binary framing layer instead of textual that converts all the messages in binary format. 
+   It works on fully multiplexed that is one TCP connection is used for multiple requests. 
+   HTTP/2 uses HPACK which is used to split data from header.it compresses the header. 
+   The server sends all the other files like CSS & JS without the request of the client using the PUSH frame.
+   It uses HPACK for data compression.
+
+      HTTP2 ---> image.png---> 1 tcp connections ---> server.
+
+
+
+WRITE A BLOG ABOUT OBJECTS AND ITS INTERNAL RESPRESENTATION IN JAVASCRIPT 
+
+    > Objects, in javascript is its most important data type and forms the building blocks for modern javascript.
+    > The objects are quite different from javascript primitive data type (number,string, boolean, null, undefined)
+    > primitive data type all store in a single value each depending on their type.  
+    
+    using javascript object with four properties:
+    eg:   
+     var person = new object();
+     person.firstName = "john";
+     person.lastName = "son";
+     person.age = 45;
+     person.eyeColor = "white"
+
+   eg:
+     var data = 5;
+     var copy = data;
+     console.log(copy);
+     data = 10;
+     console.log(copy);
+ output:
+      5.
+
+
+
+
